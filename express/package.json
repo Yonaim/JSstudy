@@ -1,0 +1,20 @@
+{
+  "name": "testexpress",
+  "version": "1.0.0",
+  "description": "asdaaaaaa",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test1": "node app1.js",
+    "test2": "node app2.js",
+    "test3": "node app3.js",
+    "test4": "node app4.js",
+    "test5": "node app5.js",
+    "hmm": "whatisthis"
+  },
+  "author": "me",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.1"
+  }
+}
