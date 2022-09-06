@@ -1,14 +1,16 @@
-require('dotenv').config()
-const mysql = require('mysql2')
-const connection = mysql.createConnection(process.env.DATABASE_URL)
-console.log('Connected to PlanetScale!')
+require('dotenv').config();
+const mysql = require('mysql2');
+const connection = mysql.createConnection(process.env.DATABASE_URL);
+console.log('Connected to PlanetScale!');
 
 let str='show tables';
-let res;
 
 function getTableList() {
-	return (connection.query(str, function(err, result){})
-	);
+	return (new Promise((resolve, reject) => {
+		const res = connection.query(str, (err, result) => {});
+		resolve(res);
+	}
+	));
 }
 
 async function logTableList() {
@@ -16,6 +18,6 @@ async function logTableList() {
 	console.log(res);
 }
 
-logTableList();
+// logTableList();
 
 connection.end()
